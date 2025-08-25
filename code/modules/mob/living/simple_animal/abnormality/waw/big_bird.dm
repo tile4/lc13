@@ -129,6 +129,9 @@
 			return FALSE
 	return ..()
 
+/mob/living/simple_animal/hostile/abnormality/big_bird/MovedTryAttack() //To prevent BB from practically having 2 range
+	return FALSE
+
 /mob/living/simple_animal/hostile/abnormality/big_bird/AttackingTarget(atom/attacked_target)
 	if(ishuman(attacked_target))
 		if(bite_cooldown > world.time)
